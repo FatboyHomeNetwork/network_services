@@ -1,4 +1,4 @@
-# Media Library - Solution Concept
+
 
 The media library will be a shared folder within SERVER. Importing into the library will use an import queue and server pull approach. Items to be imported will first be added to network queue. A windows scheduled task will periodically check the queue, and start the the copy, convert and import into media library process for any new items found in the queue. 
 
