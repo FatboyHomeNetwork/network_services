@@ -1,12 +1,35 @@
-# Network Services - Requirements
+# Media Library - Requirements
 
-A collection of network services across the whole network. Includes low level functions like DNS and file shares, as well home network functions like a torrent services and off site back ups. 
+A network wide library of media - movies, tv shows, music, home moves, & pictures
 
-The following network services are needed: 
+The Media Library will: 
 
-1. Network wide DNS for all servers a non network admin user will use
-2. Network wide VPN proxy service 
-3. A xxx standard Torrent Service accessible via web interface and available to all users within the network
-5. Network wide file share: \Public, & \Public\Temporary available to all users within the network 
-6. Network user home directory creating and hosting. Create  home directory. Migrating from local to network home directory. configure windows security to  control access. 
-4. Network wide off site back up services. Schedule backups of folders within the network. Recovery in place. Recovery from disaster. 
+1. Import  media from any node within the network into the  media library 
+2. Convert imported media to network standard media formats 
+3. Normalise imported media's file name to network name standard formats 
+4. Share the media items via the Network sharing services to all nodes within the network
+5. Perform scheduled off site back up of media library
+
+## Standard media formats 
+
+| media type  | network format |
+|---|---|
+|Audio| mp3 |
+|Video| mp4 |
+|Image| jpg |
+
+## Network name standard formats
+
+| Media Type  | Network Name Format |
+|---|---|
+|Movies| title (year) |
+|TV Show, Series| Series_Name year S01E02 Episode_Name | 
+|Music| Artist /  Album / 01 track title |
+
+## Network sharing services
+
+| type | Description |
+|---|---|
+|NFS|   |
+|SMB/CIFS|   |
+|HomeShare| needed to support Apple TV as a media player within the network |
