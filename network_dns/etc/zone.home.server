@@ -1,0 +1,30 @@
+;
+; dns zone for for server.home
+;
+$ORIGIN server.home.
+$TTL 1D
+; any time you make a change to the domain, bump the
+; "serial" setting below. the format is easy:
+; YYYYMMDDI, with the I being an iterator in case you
+; make more than one change during any one day
+@     IN SOA   service hostmaster (
+                        202205282 ; serial
+                        8H        ; refresh
+                        4H        ; retry
+                        4W        ; expire
+                        1D )      ; minimum
+; service.server.home serves this domain as both the
+; name server (NS) and mail exchange (MX)
+                NS      service
+
+; define domain functions with CNAMEs
+library       CNAME   service
+torrent       CNAME   service
+remote 	      CNAME   service
+printer       CNAME   service
+
+; just in case someone asks for localhost.server.home
+localhost       A       127.0.0.1
+
+; our hostnames, in alphabetical order
+service        A       192.0.0.2

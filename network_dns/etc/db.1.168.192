@@ -1,0 +1,17 @@
+;
+; reverse pointers for 192.0.0 subnet
+;
+
+$ORIGIN 0.0.192.in-addr.arpa.
+$TTL 1D
+@     IN SOA  service.server.home. hostmaster.server.home. (
+              202205283  ; serial
+              28800      ; refresh (8 hours)
+              14400      ; retry (4 hours)
+              2419200    ; expire (4 weeks)
+              86400      ; minimum (1 day)
+              )
+; define the authoritative name server
+              NS      service.server.home.
+; our hosts, in numeric order
+2             PTR     service.server.home.
