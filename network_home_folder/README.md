@@ -1,15 +1,1 @@
-# Network Home Dir
-
-## Overview
-
-
-
-## Design Concept 
-
-
-
-## Implementation 
-
-
-
-## Installation 
+# What's the set up and configuraiton neeeded?

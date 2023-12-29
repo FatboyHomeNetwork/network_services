@@ -1,15 +1,8 @@
-# Function Name
-
-## Overview
+# Network naming scheme 
 
 
 
-## Design Concept 
+# DNS Implementation 
 
-
-
-## Implementation 
-
-
-
-## Installation 
+Named ver X.dx.x
+config files 
