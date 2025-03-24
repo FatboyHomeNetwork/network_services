@@ -41,6 +41,8 @@ def run(original, image, log_file):
         
     start = datetime.now()
     
+    
+    ## ** write our UNI CODE, remove UNI Code convert line ** 
     log_file = open(log_file, 'a')
     log_file.write(build_log_line('Start', start.strftime('%c')))
     
@@ -55,7 +57,7 @@ def run(original, image, log_file):
             
             os.remove(v[0])
             
-            log_file.write(build_log_line('Old-Del', unicode_free(v[0])))
+            log_file.write(build_log_line('Deleted', unicode_free(v[0])))
 
 
     # The original file is not in the current image. This could because 1) the file is new, 
@@ -68,7 +70,7 @@ def run(original, image, log_file):
             os.makedirs(new_image_dir, exist_ok=True)
             shutil.copy2(v[0], new_image_dir)
             
-            log_file.write(build_log_line('New-Update', unicode_free(v[0])))
+            log_file.write(build_log_line('Added', unicode_free(v[0])))
 
     
     diff_sec = (datetime.now() - start).total_seconds()
@@ -80,11 +82,13 @@ def run(original, image, log_file):
     
     log_file.close()
 
-    ## Add soem kind of exception gn here. 
+    ## Add some  kind of exception gn here. 
 
 #
 # main()
 #
+
+print("Run")
 
 if len(sys.argv) == 4:
     # 'fatboy_sync.py' 'original path' 'image folder' 'log file path'
